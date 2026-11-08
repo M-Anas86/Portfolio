@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, FileText } from 'lucide-react';
+import { Menu, X, FileText, Download } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { Theme } from '../hooks/useTheme';
 import { portfolioConfig } from '../config/portfolio';
@@ -124,16 +124,15 @@ export function Navbar({ theme, onToggleTheme, onOpenResumeModal }: NavbarProps)
           ))}
 
           <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenResumeModal();
-              }}
+            <a
+              href={portfolioConfig.resumeUrl}
+              download="Mohammad_Anas_Resume.pdf"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-cyan-600 rounded-lg hover:bg-cyan-500 transition-colors"
             >
-              <FileText className="w-4 h-4" />
+              <Download className="w-4 h-4" />
               Download Resume
-            </button>
+            </a>
           </div>
         </div>
       )}

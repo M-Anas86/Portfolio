@@ -37,7 +37,7 @@ export function Education() {
             <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6 sm:p-8 shadow-xs">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                 <span className="text-xs font-semibold text-cyan-600 dark:text-cyan-400">
-                  Postgraduate Degree Program
+                  Postgraduate Degree · 2025 – 2027
                 </span>
                 <span className="text-xs text-slate-500 flex items-center gap-1 font-mono">
                   <MapPin className="w-3.5 h-3.5 text-slate-400" />
@@ -45,9 +45,14 @@ export function Education() {
                 </span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
-                {portfolioConfig.degree}
-              </h3>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                  {portfolioConfig.degree}
+                </h3>
+                <span className="text-xs font-mono font-semibold px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20 w-fit">
+                  CGPA: 8.34 (thru 2nd sem)
+                </span>
+              </div>
 
               <div className="mt-1 text-base font-medium text-slate-700 dark:text-slate-300">
                 {portfolioConfig.universityFull}
@@ -76,6 +81,36 @@ export function Education() {
                   ))}
                 </div>
               </div>
+            </div>
+
+            {/* Undergraduate Degree Card */}
+            <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6 sm:p-8 shadow-xs">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <span className="text-xs font-semibold text-cyan-600 dark:text-cyan-400">
+                  Undergraduate Degree · 2022 – 2025
+                </span>
+                <span className="text-xs text-slate-500 flex items-center gap-1 font-mono">
+                  <MapPin className="w-3.5 h-3.5 text-slate-400" />
+                  Azamgarh, Uttar Pradesh, India
+                </span>
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                  Bachelor of Computer Applications (BCA)
+                </h3>
+                <span className="text-xs font-mono font-semibold px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20 w-fit">
+                  CGPA: 6.57
+                </span>
+              </div>
+
+              <div className="mt-1 text-base font-medium text-slate-700 dark:text-slate-300">
+                Shibli National PG College, Azamgarh
+              </div>
+
+              <p className="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Foundational computer science study in programming (Java, C, SQL), algorithms, data structures, web technologies, and database management systems.
+              </p>
             </div>
           </div>
         </div>

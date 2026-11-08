@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, FileText, Mail, Github, Linkedin, MapPin, Database, Cpu, Layers } from 'lucide-react';
+import { ArrowRight, Download, FileText, Mail, Github, Linkedin, MapPin, Database, Cpu, Layers } from 'lucide-react';
 import { portfolioConfig } from '../config/portfolio';
 import { TerminalVisual } from './TerminalVisual';
 
@@ -92,14 +92,14 @@ export function Hero({ onOpenResumeModal, publicRepoCount = 7 }: HeroProps) {
                 <ArrowRight className="w-4 h-4" />
               </a>
 
-              <button
-                type="button"
-                onClick={onOpenResumeModal}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              <a
+                href={portfolioConfig.resumeUrl}
+                download="Mohammad_Anas_Resume.pdf"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-xs"
               >
-                <FileText className="w-4 h-4 text-cyan-500" />
+                <Download className="w-4 h-4 text-cyan-500" />
                 Download Resume
-              </button>
+              </a>
 
               <a
                 href="#contact"
